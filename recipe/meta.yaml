@@ -62,6 +62,7 @@ about:
   license_file: LICENSE
   license: LicenseRef-NVIDIA-End-User-License-Agreement
   license_url: https://docs.nvidia.com/cuda/eula/index.html
+  license_family: Other
   summary: ctadvisor is a tool that helps users analyze the compilation time of their CUDA C++ code and provides suggestions to reduce it.
   description: |
     CUDA Compile Time Advisor (ctadvisor) analyzes trace files containing compilation
@@ -73,8 +74,6 @@ about:
   dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
-  skip-lints:
-    - license_file_overspecified
   feedstock-name: cuda-ctadvisor
   recipe-maintainers:
     - conda-forge/cuda
