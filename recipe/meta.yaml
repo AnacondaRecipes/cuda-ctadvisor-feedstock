@@ -1,4 +1,4 @@
-{% set version = "13.2.78" %}
+{% set version = "13.2.86" %}
 {% set cuda_version = "13.2" %}
 {% set platform = "linux-x86_64" %}  # [linux64]
 {% set platform = "linux-sbsa" %}  # [aarch64 and arm_variant_type == "sbsa"]
@@ -9,9 +9,9 @@
 
 {% set soname = version.split(".")[0] %}
 
-{% set sha256 = "0307e442d433904bf0ae63b752c0463975a579cd5f5c56adb671261574cf1b4e" %}  # [linux64]
-{% set sha256 = "3b7d9182e74dfcb9261e26c087dbe82ae0a5e733024cbfc7f534ec07c0a68099" %}  # [aarch64]
-{% set sha256 = "4ecc553a54781b98fba661deaee1c8172d442d54e82920a57b9f0bcc720ae96e" %}  # [win]
+{% set sha256 = "aabf3c9fdc2bef5b657b9a6db44a1f92b35670dec2c5dc8d42a977af44b31736" %}  # [linux64]
+{% set sha256 = "64cf8ec40a80437b24d40a6bc403010feb87c5e40bfe2801643a15ba8be18044" %}  # [aarch64]
+{% set sha256 = "14062052713861f153848effa3f4979f00d60b65339ef110c89070ae1d257ae6" %}  # [win]
 
 package:
   name: cuda-ctadvisor-split
