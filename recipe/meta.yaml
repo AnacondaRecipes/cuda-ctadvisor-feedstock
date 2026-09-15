@@ -24,7 +24,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   binary_relocation: false
   skip: true  # [osx]
 
@@ -34,9 +34,9 @@ requirements:
 
 outputs:
   - name: cuda-ctadvisor
-    build:                           # [win]
-      script:                        # [win]
-         - move bin\* %LIBRARY_BIN%  # [win]
+    build:                          # [win]
+      script:                       # [win]
+        - move bin\* %LIBRARY_BIN%  # [win]
     files:             # [linux]
       - bin/ctadvisor  # [linux]
     requirements:
@@ -76,6 +76,11 @@ about:
   dev_url: https://docs.nvidia.com/cuda/index.html
 
 extra:
+  skip-lints:
+    - deprecate_license_url
+    # Skip "wrong_output_script_key: It should be `outputs/x/script`, not `outputs/x/build/script`"
+    # Applying the suggested changes causes PBP graph generation failures
+    - wrong_output_script_key
   feedstock-name: cuda-ctadvisor
   recipe-maintainers:
     - conda-forge/cuda
